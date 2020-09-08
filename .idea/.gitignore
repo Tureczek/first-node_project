@@ -1,0 +1,5 @@
+# Default ignored files
+/workspace.xml
+
+# Project exclude paths
+/2.Our_First_API/node_modules/

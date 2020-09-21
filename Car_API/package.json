@@ -1,4 +1,5 @@
 {
+  "description": "Car API",
   "dependencies": {
     "express": "^4.17.1"
   },

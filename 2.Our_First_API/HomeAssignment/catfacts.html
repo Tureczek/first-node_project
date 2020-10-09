@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Facts</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<h1>Cat Facts</h1>
+
+
+<table>
+    <tr>
+        <th>
+            Fun Fact1
+        </th>
+        <th>
+            Fun Fact 2
+        </th>
+    </tr>
+    <tr>
+        <td>
+            Fun Fact 1
+        </td>
+        <td>
+            Cats are fun!
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Fun Fact 2
+        </td>
+        <td>
+            Cats are fun 2!
+        </td>
+    </tr>
+</table>
+
+<img src="https://www.catster.com/wp-content/uploads/2015/08/grumpy-cat-meme-00.jpg" alt="">
+<img src="https://i.pinimg.com/564x/2c/c9/dd/2cc9dd8ed1860d3be29ef5361fb7e972.jpg" alt="Cat">
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $.get("https://cat-fact.herokuapp.com/facts", response => {
+        console.log(response);
+    });
+
+    /*
+    https://alexwohlbruck.github.io/cat-facts/docs/
+
+    *1. Get cat facts by the way of $.Ajax()
+    *2. Show the cat facts in the table (Jquery til at injecte)
+    *3. Style it
+    *4. Bonus pagination
+    *
+    */
+
+
+</script>
+</body>
+</html>

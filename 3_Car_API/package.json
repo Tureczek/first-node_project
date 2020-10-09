@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start-dev": "cross-env PORT=8080 nodemon Car_API.js",
+    "start-prod": "cross-env PORT=5000 node Car_API.js"
+  }
+}

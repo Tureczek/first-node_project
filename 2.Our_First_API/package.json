@@ -1,8 +1,0 @@
-{
-  "repository": "No",
-  "license": "MIT",
-  "description": "Our First API",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
-}

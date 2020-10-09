@@ -1,4 +1,6 @@
 const express = require("express");
+const fetch = require('node-fetch');
+const encoding = require("encoding");
 const app = express();
 const obj = require("../../1_intro/1_Exercieses/object");
 app.use(express.json());
@@ -6,7 +8,6 @@ app.use(express.urlencoded());
 
 
 //ALDRIG VAR!!! - brug let eller const
-
 app.listen(8080, (error) =>{
     if (error){
         console.log("Error starting server");
@@ -17,6 +18,43 @@ app.listen(8080, (error) =>{
 app.get("/", (req, res) => {
    return res.send("<h1>Hello, World!</h1>");
 });
+
+
+
+//Redirecting
+app.get("/greeting", (req, res) =>{
+    res.redirect("/");
+});
+
+app.get("/proxy", (req, res) =>{
+    fetch('https://www.google.dk/')
+        .then(result => result.textConverted())
+        .then(body => {
+            //const page = encoding.convert(body);
+            return res.send(body);
+        });
+    });
+
+//Sendfile tager imod absolute path
+app.get("/documentation", (req, res) =>{
+    console.log(__dirname); // fortæller hvor kommandoen bliver kørt fra.
+    return res.sendfile(__dirname + "/documentation.html");
+});
+
+//Getting catFact html
+app.get("/catfact", (req, res) => {
+    return res.sendfile(__dirname + "\\catfacts.html");
+});
+
+
+app.get("/documentation2", (req, res) =>{
+    console.log(__dirname); // fortæller hvor kommandoen bliver kørt fra.
+
+    return res.sendfile(__dirname + "/documentation2.html");
+});
+
+
+
 
 //Getting current time
 app.get("/time", (req, res) =>{

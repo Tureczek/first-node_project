@@ -3,20 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/upload/navbar.css">
     <link rel="stylesheet" href="/upload/upload.css">
 </head>
 <body>
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-    <a href="/javascript">JavaScript</a>
-    <a href="/npm">npm</a>
-    <a href="/">Home</a>
-    <a href="#">About</a>
-</div>
+<!-- navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 
-<div id="sidebarMain">
-    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
-</div>
+            </button>
+            <a class="navbar-brand" href="/">HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/npm">NPM</a></li>
+                <li><a href="/jquery">JQUERY</a></li>
+                <li><a href="/javascript">JAVASCRIPT</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/mapping">RESTFUL</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
 <div class="container text-center" style="color: white">

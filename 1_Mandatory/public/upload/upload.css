@@ -77,6 +77,7 @@ body{
     height: 255px;
 }
 
+/* INDEX PAGE CSS */
 #proxyButton{
     background-color: greenyellow;
     border: none;
@@ -89,5 +90,28 @@ body{
     display: inline-block;
     margin: 4px 2px;
     opacity: .9;
+}
 
+
+/*Mappings CSS */
+
+*{
+    box-sizing: border-box;
+}
+.mappingHeader{
+    color: white;
+    padding: 40px;
+
+}
+
+.restColumn{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.restRow:after{
+     content: "";
+    display: table;
+    clear: both;
 }

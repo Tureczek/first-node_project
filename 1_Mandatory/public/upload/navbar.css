@@ -1,0 +1,38 @@
+.navbar{
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: .9;
+}
+
+.navbar li a, .navbar .navbar-brand{
+    color: #d5d5d5;
+}
+
+.navbar-nav li a:hover{
+    color: #ffffff;
+}
+
+.navbar-nav li.active a{
+    color: #ffffff;
+    background-color: #29292c;
+}
+
+.navbar-default .navbar-toggle{
+    border-color: transparent;
+}
+
+.open .dropdown-toggle{
+    color: #ffffff;
+    background-color: #555;
+}
+
+.dropdown-menu li a{
+    color: #000;
+}
+
+.dropdown-menu li a:hover{
+    background-color: greenyellow;
+}

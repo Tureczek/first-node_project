@@ -26,6 +26,16 @@ app.get("/test", (req, res) => {
     return res.sendfile(__dirname + "/public/upload/test.html");
 });
 
+//Kig lige lidt ekstra på denne hvis der er tid.
+app.get("/proxy", (req, res) => {
+    fetch("https://en.wikipedia.org/wiki/Node.js")
+        .then(result => result.textConverted())
+        .then(body =>{
+            return res.send(body);
+        });
+});
+
+
 
 const port = process.env.PORT || 80;
 app.listen(80, (error) =>{

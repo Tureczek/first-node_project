@@ -77,3 +77,17 @@ body{
     height: 255px;
 }
 
+#proxyButton{
+    background-color: greenyellow;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    opacity: .9;
+
+}

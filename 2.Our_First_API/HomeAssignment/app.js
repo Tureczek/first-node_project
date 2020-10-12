@@ -54,8 +54,6 @@ app.get("/documentation2", (req, res) =>{
 });
 
 
-
-
 //Getting current time
 app.get("/time", (req, res) =>{
     const date_obj = new Date();

@@ -109,6 +109,14 @@ body{
     padding: 10px;
     color: white;
 }
+.restColumn2{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    color: white;
+    height: 120px;
+    background-color: dimgray;
+}
 
 .bodyStripe{
     width: 100%;

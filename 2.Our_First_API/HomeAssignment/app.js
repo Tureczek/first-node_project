@@ -8,7 +8,7 @@ app.use(express.urlencoded());
 
 
 //ALDRIG VAR!!! - brug let eller const
-app.listen(8080, (error) =>{
+app.listen(80, (error) =>{
     if (error){
         console.log("Error starting server");
     }
@@ -43,7 +43,7 @@ app.get("/documentation", (req, res) =>{
 
 //Getting catFact html
 app.get("/catfact", (req, res) => {
-    return res.sendfile(__dirname + "\\catfacts.html");
+    return res.sendfile(__dirname + "/catfacts.html");
 });
 
 

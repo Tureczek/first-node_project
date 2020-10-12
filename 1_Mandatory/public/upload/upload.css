@@ -100,14 +100,20 @@ body{
 .mappingHeader{
     color: white;
     padding: 50px;
-
 }
+
 
 .restColumn{
     float: left;
     width: 33.33%;
     padding: 10px;
     color: white;
+}
+
+.bodyStripe{
+    width: 100%;
+    height: 4px;
+    background-color: greenyellow;
 }
 
 .restRow:after{

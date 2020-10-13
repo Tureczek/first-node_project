@@ -1,3 +1,7 @@
-body{
-    background-color : red;
+#logo1{
+    background-image: url("assets/index.png");
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
 }

@@ -1,0 +1,20 @@
+#logo-img{
+    width: 4%;
+}
+#about-logo{
+    width: 4%;
+}
+#download-img{
+    width: 4%;
+
+}
+
+#footer{
+    background-color: #555555;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}

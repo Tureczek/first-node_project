@@ -22,8 +22,8 @@ app.get("/jquery", (req, res) => {
     return res.sendfile(__dirname + "/public/upload/jquery.html");
 });
 
-app.get("/mapping", (req, res) => {
-    return res.sendfile(__dirname + "/public/upload/mapping.html");
+app.get("/restful", (req, res) => {
+    return res.sendfile(__dirname + "/public/upload/restful.html");
 });
 
 app.get("/test", (req, res) => {

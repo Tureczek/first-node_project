@@ -18,6 +18,7 @@ const myObj = {
 
 
 //Arrays
+/*
 const fruits = ["Apple", "Banana"];
 fruits.push("Pear");
 console.log(fruits);
@@ -26,3 +27,7 @@ console.log(fruits[1]);
 fruits.pop();
 fruits.pop();
 console.log(fruits);
+*/
+
+const foo = [ 123, 456 ]
+foo = 789

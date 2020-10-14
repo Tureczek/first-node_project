@@ -34,7 +34,7 @@ app.get("/cars", (req, res) =>{
     return res.send(cars);
 });
 
-// type coercion ===
+
 app.get("/cars/:id", (req, res)=>{
     const car = cars.find(car => car.id === Number(req.params.id));
     return res.send({data : car});

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+.mappingHeader{
+    color: white;
+    padding: 50px;
+}
+
+
+.restColumn{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    color: white;
+}
+.restColumn2{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    color: white;
+    height: 120px;
+    background-color: dimgray;
+}
+
+.bodyStripe{
+    width: 100%;
+    height: 4px;
+    background-color: greenyellow;
+}
+
+.restRow:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.methodShow{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    color: white;
+    height: 200px;
+}

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jQuery</title>
+    <title>RESTful</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/upload/navbar.css">
     <link rel="stylesheet" href="/upload/upload.css">
+    <link rel="stylesheet" href="/upload/restful/restful.css">
 </head>
 <body>
 <!-- navigation bar -->
@@ -31,7 +31,7 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">AJAX</a></li>
+                        <li><a href="/ajax">AJAX</a></li>
                         <li><a href="/restful">RESTFUL</a></li>
                     </ul>
                 </li>
@@ -78,11 +78,66 @@
         <p><strong>Delete an existing resource.</strong></p></div>
     </div>
     <div class="bodyStripe"></div>
-    <p><h2>The following wil show examples on the methods</h2></p>
+    <p><h2>The following wil show examples on the methods of REST</h2></p>
+    <p><h4><em>Communication between clients and servers on the internet mostly takes place via the HTTP
+        protocol (Hypertext Transfer Protocol). This enables a data exchange <br>
+        via request and response. When a user retrieves a URL via a client (e.g. their web browser),
+        this client sends a request to the server, and the <br>
+        server provides an HTML page that is loaded by the user’s browser. The two most commonly used methods to enable this
+        kind of communication are GET and POST.</em></h4></p> <br>
+    <p><h3><li>Query strings</li></h3></p>
+    <p><h4><em>When the GET request method is used, if a client uses the HTTP protocol on a web server to request a certain
+    resource, the client sends the server certain GET parameters through the <br>
+    requested URL. These parameters are pairs of key and their corresponding values, so-called key-value pairs. These are added to the
+    <br>URL with a “?” sign and tell the server which resources are meant. The name and value are always separated using a “=” sign.</em></h4></p>
+    <br>
+    <p><h4><em>Here is a look at the syntax in the url:</em></h4></p> <br>
+    <img src="/upload/restful/assets/get_parameters1.png" alt="Get Parameters" style="position: center">
+    <br><br>
+    <p><h4><em>And if more parameters are to be used, the syntax would look like this;</em></h4></p>
+    <br>
+    <img src="/upload/restful/assets/Get_parameters2.png" alt="Get parameters 2">
+    <br>
+    <p><h4><em>This is possible through the following get request method:</em></h4></p>
+    <img src="/upload/restful/assets/Query_string_get.png" alt="Get code">
+    <p><h4><em>The above code can be run and tested right now. Go on, try to type "localhost/rest?q=?hello" in your url. It will take
+    <br>you to a blank page with a little text, and your value.</em></h4></p>
+
+</div>
+
+<div class="restRow" style="margin-top: 7%">
+    <div class="methodShow">
+        <p>Let' try going through a familiar case in this example, to show how the methods of Rest works.
+            First off, lets say we want a "database" of cars.
+            In this example we dont use a real database but instead an array of JSON objects, just for the demonstration.
+            The Array wil consist of 3 cars from the start, shown in the right side:
+        </p>
+        <br><br><br>
+        <p>We are gonna demonstrate 4 of the 5 methods, while PUT and PATCH could be perceived as somewhat of the same method.</p>
+        <br>
+        <p>First off we wil look at the get method, and this will be done in two different ways: <br>
+        <li style="margin-left: 2%">Get all cars</li>
+        <li style="margin-left: 2%">Get a car with a specific id</li>
+        <br><br>
+        <p>The first app.get returns the entire array of cars to the user through the callback function,
+            this happens when arriving at the page "/cars". <br>
+            - The callback function is explained under the JavaScript page. <br> <br>
+            The second get request is a get request for a car with a specific id. As seen above the cars have an id and a model.
+            <br> The path which is written as: "cars/:id" is a method to recieve a
+        </p>
+    </div>
+    <div class="methodShow">
+        <img src="/upload/restful/assets/Car%20array.png" alt="car array" style="margin-left: 40%">
+        <br>
+        <br>
+        <img src="/upload/restful/assets/Get methods.png" alt="car syntax" style="margin-left: 40%">
+    </div>
+
 </div>
 
 
 <script src="/upload/upload.js"></script>
+<script src="restful.js"></script>
 </body>
 
 </html>

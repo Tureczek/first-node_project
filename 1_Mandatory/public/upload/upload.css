@@ -19,62 +19,43 @@ body{
     color: #ffffff;
 }
 
+.navbar{
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: .9;
+}
 
-.sidebar{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
+.navbar li a, .navbar .navbar-brand{
+    color: #d5d5d5;
+}
+
+.navbar-nav li a:hover{
+    color: #ffffff;
+}
+
+.navbar-nav li.active a{
+    color: #ffffff;
+    background-color: #29292c;
+}
+
+.navbar-default .navbar-toggle{
+    border-color: transparent;
+}
+
+.open .dropdown-toggle{
+    color: #ffffff;
+    background-color: #555;
+}
+
+.dropdown-menu li a{
+    color: #000;
+}
+
+.dropdown-menu li a:hover{
     background-color: greenyellow;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    opacity: 0.4;
-}
-
-.sidebar a{
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-}
-.sidebar a:hover{
-    color: lightslategray;
-}
-
-.sidebar .closebtn{
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.openbtn{
-    font-size: 20px;
-    cursor: pointer;
-    background-color: greenyellow;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-}
-
-.openbtn:hover{
-    background-color: lightslategray;
-}
-
-#sidebarMain{
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
-.col-sm-4{
-    width: 500px;
-    height: 255px;
 }
 
 /* INDEX PAGE CSS */
@@ -90,42 +71,4 @@ body{
     display: inline-block;
     margin: 4px 2px;
     opacity: .9;
-}
-
-
-/*RESTFUL CSS */
-*{
-    box-sizing: border-box;
-}
-.mappingHeader{
-    color: white;
-    padding: 50px;
-}
-
-
-.restColumn{
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    color: white;
-}
-.restColumn2{
-    float: left;
-    width: 20%;
-    padding: 10px;
-    color: white;
-    height: 120px;
-    background-color: dimgray;
-}
-
-.bodyStripe{
-    width: 100%;
-    height: 4px;
-    background-color: greenyellow;
-}
-
-.restRow:after{
-     content: "";
-    display: table;
-    clear: both;
 }

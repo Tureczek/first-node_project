@@ -127,18 +127,26 @@
         <p>First off we wil look at the get method, and this will be done in two different ways: <br>
         <li style="margin-left: 2%">Get all cars</li>
         <li style="margin-left: 2%">Get a car with a specific id</li>
-        <br><br>The first app.get returns the entire array of cars to the user through the callback function,
+        <br>The first app.get returns the entire array of cars to the user through the callback function,
             this happens when arriving at the page "/cars". <br>
             - The callback function is explained under the JavaScript page.<br><br>
             The second get request is a get request for a car with a specific id. As seen above the cars have an id and a model.
             <br> The path which is written as: "cars/:id" is a method to receive a request parameter where it in this case, looks for a specific id.
-        </p><br><br>
+        </p><br><br><br><br>
         <p><h4><li style="margin-left: 2%; text-decoration: underline">POST mapping</li></h4></p>
+        <p>The Post mapping seen on the right hand side, continue our car case. <br>
+        at first we are going to "console.log(req.body);" so that we can see in our terminal, what is going in. <br>
+            then we use the parameters in the req.body to make a new object called "newCar", and as we have seen above, all the cars have an id.
+            Since this is just an array and not at database, the id is not auto incremented, this is something we have do ensure ourself. We do that by making a variable
+            called "nextCarId" and notate it to be 3, while we already have the first 3 id's in our array.
+            then we set the "newCar.id = nextCarId++;", which ensures that the next id of the car is going to be incremented every time a new car is created.
+        </p>
     </div>
     <div class="methodShow">
         <img src="/upload/restful/assets/Car%20array.png" alt="car array" style="margin-left: 40%">
         <img src="/upload/restful/assets/express_json.png" alt="car array" style="margin-left: 40%; margin-top: 5%">
         <img src="/upload/restful/assets/Get methods.png" alt="car syntax" style="margin-left: 40%; margin-top: 12%">
+        <img src="/upload/restful/assets/post_method.png" alt="car syntax" style="margin-left: 40%; margin-top: 20%">
     </div>
 </div>
 

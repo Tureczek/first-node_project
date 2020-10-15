@@ -72,3 +72,13 @@ body{
     margin: 4px 2px;
     opacity: .9;
 }
+
+#footer{
+    background-color: #555555;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}

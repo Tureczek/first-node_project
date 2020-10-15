@@ -55,7 +55,7 @@ app.patch("/cars/:id", (req, res) =>{
     //cars = cars.map(car => car.id === Number(req.params.id));
     cars = cars.map(car =>{
         if(car.id === Number(req.params.id)){
-            return {...car, ...req.body, id: car.id};
+            return {...car, ...req.body, id: car.id}; //spread operator
         }
         return car;
     });

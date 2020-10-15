@@ -107,32 +107,39 @@
 
 <div class="restRow" style="margin-top: 7%">
     <div class="methodShow">
-        <p>Let' try going through a familiar case in this example, to show how the methods of Rest works.
+        <p>Let' try going through a familiar case in this example, to show how the methods of Rest works. I Will be using an old
+            <br> code, which i am familiar with, for the sake of understanding.
             First off, lets say we want a "database" of cars.
             In this example we dont use a real database but instead an array of JSON objects, just for the demonstration.
             The Array wil consist of 3 cars from the start, shown in the right side:
         </p>
         <br><br><br>
+        <p>Taking into consideration that the array of cars which we have created is in the form of JSON data. We have to add something
+            <br>in the top of our code, to be able to parse JSON date. We do that through express, by notating "app.use(express.json());" and
+            <br> "app.use(express.urlencoded());" in the top of our app.js file. <br>
+            - If a problem parsing json data still occurs, it could be because of NPM's pre installed bodyparser. <br>
+            this can be removed in the terminal by writing "npm uninstall body-parser".
+            <br></p>
+        <br><br><br>
         <p>We are gonna demonstrate 4 of the 5 methods, while PUT and PATCH could be perceived as somewhat of the same method.</p>
         <br>
+        <p><h4><li style="margin-left: 2%; text-decoration: underline">GET mapping</li></h4>
         <p>First off we wil look at the get method, and this will be done in two different ways: <br>
         <li style="margin-left: 2%">Get all cars</li>
         <li style="margin-left: 2%">Get a car with a specific id</li>
-        <br><br>
-        <p>The first app.get returns the entire array of cars to the user through the callback function,
+        <br><br>The first app.get returns the entire array of cars to the user through the callback function,
             this happens when arriving at the page "/cars". <br>
-            - The callback function is explained under the JavaScript page. <br> <br>
+            - The callback function is explained under the JavaScript page.<br><br>
             The second get request is a get request for a car with a specific id. As seen above the cars have an id and a model.
-            <br> The path which is written as: "cars/:id" is a method to recieve a
-        </p>
+            <br> The path which is written as: "cars/:id" is a method to receive a request parameter where it in this case, looks for a specific id.
+        </p><br><br>
+        <p><h4><li style="margin-left: 2%; text-decoration: underline">POST mapping</li></h4></p>
     </div>
     <div class="methodShow">
         <img src="/upload/restful/assets/Car%20array.png" alt="car array" style="margin-left: 40%">
-        <br>
-        <br>
-        <img src="/upload/restful/assets/Get methods.png" alt="car syntax" style="margin-left: 40%">
+        <img src="/upload/restful/assets/express_json.png" alt="car array" style="margin-left: 40%; margin-top: 5%">
+        <img src="/upload/restful/assets/Get methods.png" alt="car syntax" style="margin-left: 40%; margin-top: 12%">
     </div>
-
 </div>
 
 

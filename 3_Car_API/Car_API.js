@@ -49,10 +49,9 @@ app.post("/cars", (req, res) =>{
     return res.send({data : cars});
 });
 
-
+// find car -> get id -> overwrite in array
+//cars = cars.map(car => car.id === Number(req.params.id));
 app.patch("/cars/:id", (req, res) =>{
-    // find car -> get id -> overwrite in array
-    //cars = cars.map(car => car.id === Number(req.params.id));
     cars = cars.map(car =>{
         if(car.id === Number(req.params.id)){
             return {...car, ...req.body, id: car.id}; //spread operator

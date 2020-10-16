@@ -47,11 +47,6 @@ app.get("/rest", (req, res) => {
 
 
 
-
-
-
-
-
 //Kig lige lidt ekstra på denne hvis der er tid.
 app.get("/proxy", (req, res) => {
     fetch("https://en.wikipedia.org/wiki/Node.js")
@@ -60,7 +55,6 @@ app.get("/proxy", (req, res) => {
             return res.send(body);
         });
 });
-
 
 
 

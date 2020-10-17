@@ -15,20 +15,20 @@ function  taskTwo(){
     console.log("Task 2");
 }
 
-taskOne();
+setTimeout(taskOne, 2000);
 taskTwo();
 
+document.querySelector("#callbackButton")
+    .addEventListener("click", function (){
+        console.log("A user has pressed the Try me button")
+    });
 
-
-
-
-
-
-
-$(".stripeTop").css("margin-top", "60%");
-$(".stripeBottom").css("margin-top", "7.1%");
 
 $(".firstExample").css({
     "font-weight" : "bold",
     "margin-left" : "7%"
 });
+
+$("#moreExamples").css("text-decoration", "underline");
+$(".space1").css("margin-left", "2.5em");
+$(".space2").css("margin-left", "5em");

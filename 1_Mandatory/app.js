@@ -62,8 +62,9 @@ app.get("/proxy", (req, res) => {
 
 const port = process.env.PORT || 80;
 app.listen(80, (error) =>{
+
     if (error){
-        console.log("Error starting server");
+        console.log("Error starting server " + error);
     }
     console.log("server is running on port", Number(port));
 });

@@ -127,7 +127,8 @@
     <br>
     <p><h4><em>This is possible through the following get request method:</em></h4></p>
     <img src="/upload/restful/assets/Query_string_get.png" alt="Get code">
-    <p><h4><em>The above code can be run and tested right now. Go on, try to type "localhost/rest?q=hello" in your url. It will take
+    <p><h4><em>The above code can be run and tested right now. Go on, try to type "localhost/rest?q=hello" in your url.
+    It will take
     <br>you to a blank page with a little text, and your value.</em></h4></p>
 </div>
 
@@ -188,8 +189,8 @@
             stores a array of objects, thus the jason object created here is:</p>
         <br>
         <div class="jsonExample">
-        <p>{ </p>
-           <p class="space1"> "data" : [ </p>
+            <p>{ </p>
+            <p class="space1"> "data" : [ </p>
             <p class="space2">{</p>
             <p class="space3">"id": 1,</p>
             <p class="space3">"model": "Jaguar"</p>
@@ -201,7 +202,7 @@
             <p class="space1">]</p>
             }<br>
         </div>
-        <p style="margin-top: 65%">
+        <p style="margin-top: 50%">
         <h4>
             <li>PUT / PATCH mapping</li>
         </h4>
@@ -224,21 +225,35 @@
             <li>DELETE mapping</li>
         </h4>
         <br>
-        The DELETE mapping does as the name suggests, delete an item in the array. <br>
-        Yet again we put the id parameter in the path to make sure that we get the right object.
+        <p>The DELETE mapping does as the name suggests, delete an item in the array. <br>
+            Yet again we put the id parameter in the path to make sure that we get the right object.
     </div>
     <div class="methodShow">
-        <img src="/upload/restful/assets/Car%20array.png" alt="car array" style="margin-left: 20%">
+        <img src="/upload/restful/assets/Car%20array.png" alt="car array" style="margin-left: 20%"> <br>
         <img src="/upload/restful/assets/express_json.png" alt="Express & json"
              style="margin-left: 20%; margin-top: 5%">
         <img src="/upload/restful/assets/Get methods.png" alt="GET Method" style="margin-left: 20%; margin-top: 12%">
-        <img src="/upload/restful/assets/post_method.png" alt="POST method" style="margin-left: 20%; margin-top: 30%">
-        <img src="/upload/restful/assets/patch_method.png" alt="patch method" style="margin-left: 20%; margin-top: 60%">
+        <img src="/upload/restful/assets/post_method.png" alt="POST method" style="margin-left: 20%; margin-top: 27%">
+        <img src="/upload/restful/assets/patch_method.png" alt="patch method" style="margin-left: 20%; margin-top: 57%">
         <img src="/upload/restful/assets/delete_mapping.png" alt="Delete method"
-             style="margin-left: 20%; margin-top: 15%; padding-bottom: 100px">
+             style="margin-left: 20%; margin-top: 15%; padding-bottom: 10%">
     </div>
 </div>
 
+
+<div class="restRow" style="margin-top: 100%">
+    <div class="jsonExample" id="car_Array">
+        <table id="car_Table">
+            <tr>
+                <td id="cars">
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button id="reload">Load</button>
+    <button id="delete_All">Delete All</button>
+</div>
 
 <script src="/upload/upload.js"></script>
 <script src="/upload/restful/restful.js"></script>

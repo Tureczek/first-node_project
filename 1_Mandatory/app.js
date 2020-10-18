@@ -45,6 +45,49 @@ app.get("/rest", (req, res) => {
 
 
 
+app.get("/cars", (req, res) =>{
+    return res.send(cars);
+});
+
+
+app.get("/cars/:id", (req, res)=>{
+    const car = cars.find(car => car.id === Number(req.params.id));
+    return res.send({data : car});
+});
+
+
+app.post("/cars", (req, res) =>{
+    console.log(req.body);
+    const newCar = req.body;
+    newCar.id = nextCarId++;
+    cars.push(newCar);
+    return res.send({data : cars});
+});
+
+// find car -> get id -> overwrite in array
+//cars = cars.map(car => car.id === Number(req.params.id));
+app.patch("/cars/:id", (req, res) =>{
+    cars = cars.map(car =>{
+        if(car.id === Number(req.params.id)){
+            return {...car, ...req.body, id: car.id}; //spread operator
+        }
+        return car;
+    });
+    return res.send({data : cars})
+});
+
+app.delete("/cars/:id", (req, res) =>{
+    cars = cars.filter(car => car.id !== Number(req.params.id));
+    return res.send({data: cars});
+});
+
+let cars = [
+    {id: 1, model: "Jaguar"},
+    {id: 2, model: "Mitsubishi"},
+    {id: 3, model: "BMW"}
+];
+
+
 
 
 //Kig lige lidt ekstra på denne hvis der er tid.

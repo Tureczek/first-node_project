@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/upload/upload.css">
+    <link rel="stylesheet" href="upload/npm/npm.css">
 </head>
 <body>
 <!-- navigation bar -->
@@ -40,46 +41,79 @@
 </nav>
 
 <div class="container text-center">
-<h1 >What is NPM?</h1>
-    <h4><strong><em>NPM is a package manager for Node.js packages, or modules if you like.</em></strong></h4>
-    <h4><strong><em><a href="www.npmjs.com" target="_blank" style="color: green">www.npmjs.com</a> hosts thousands of free packages to download and use.</em></strong></h4>
-    <h4><strong><em>The NPM program is installed on your computer when you install Node.js</em></strong></h4>
+    <h1>What is NPM?</h1>
+    <h4><em>NPM is a package manager for Node.js packages, or modules if you like.</em></h4>
+    <h4><em><a href="www.npmjs.com" target="_blank" style="color: green">www.npmjs.com</a> hosts thousands of free
+        packages to download and use.</em></strong></h4>
+    <h4><em>The NPM program is installed on your computer when you install Node.js</em></h4>
 </div>
 
 <div class="container" id="npmVersion">
-        <div class="col-sm-4">
-            <h3>NPM in the terminal</h3>
-            <p><strong>Check for version</strong></p>
-            <p>Writing "npm -v" in the terminal will show if you have npm installed on your computer
-                and if so, then what version is installed</p>
-            <br>
-            <img src="../../images/npm/Billede%20uden%20titel.png" alt="#" id="npmImages">
-        </div>
+    <div class="col-sm-4">
+        <h3>NPM in the terminal</h3>
+        <p>Check for version</p>
+        <p>Writing "npm -v" in the terminal will show if you have npm installed on your computer
+            and if so, then what version is installed</p>
+        <br>
+        <img src="../../images/npm/Billede%20uden%20titel.png" alt="#" id="npmImages">
+    </div>
 </div>
 <br> <br>
 <div class="container" id="expressInfo" style="margin-top: -6%">
     <div class="col-sm-4">
         <h3>NPM and express</h3>
-        <p><strong>What is express</strong></p>
+        <p>What is express</p>
         <p>Express is the most popular Node web framework, and is the underlying library for a
             number of other popular Node web frameworks.</p>
         <p>Express can be installed through the terminal with "npm i express". - i is short for install.</p>
-        <p><strong><em>It is important to note that, before you can install anything to your project through NPM, you need first to create a json
-        file in your project, called "package.json".</em></strong></p>
+        <p><em>It is important to note that, before you can install anything to your project through NPM, you need first
+            to create a json
+            file in your project, called "package.json".</em></p>
         <br>
         <img src="../../images/npm/Billede%20uden%20titel3.png" alt="#" id="npmImages1">
         <br><br>
         <p>When installed, you can see the dependency being added to package.json</p>
         <br>
         <img src="../../images/npm/Billede%20uden%20titel4.png" alt="#" id="npmImages2">
+        <br>
     </div>
 </div>
-<div class="container text-center" style="margin-top: 0%">
+
+<div class="vidRow">
+    <h1>Three ways to install npm dependencies in the package.json file</h1>
+    <div class="vidColumn">
+        <div class="npmVids">
+            <p>Manually install</p>
+            <video width="320" height="240" controls>
+                <source src="/upload/npm/assets/dependencies_manually.mp4">
+            </video>
+        </div>
+    </div>
+    <div class="vidColumn">
+        <div class="npmVids">
+            <p>Terminal install</p>
+            <video width="320" height="240" controls>
+                <source src="/upload/npm/assets/npm-i-express.mp4">
+            </video>
+        </div>
+    </div>
+    <div class="vidColumn">
+        <div class="npmVids">
+            <p>Npm init install</p>
+            <video width="320" height="240" controls>
+                <source src="/upload/npm/assets/npm-init.mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center" style="margin-top: 25%">
     <h2>How to use it.</h2>
-    <h3>In the top of the "app.js" file, you import express with the keyword require and make use of it through the: </h3>
-    <p style="margin-right: 250px"><strong>app.get("/", (req, res) => { </strong></p>
-        <p style="margin-right: 0px"><strong>return res.sendfile(__dirname + "/public/upload/index.html"); </strong></p>
-        <p style="margin-right: 410px"><strong>});</strong></p> <br>
+    <h3>In the top of the "app.js" file, you import express with the keyword require and make use of it through
+        the: </h3>
+    <p style="margin-right: 250px">app.get("/", (req, res) => {</p>
+    <p style="margin-right: 0px"><strong>return res.sendfile(__dirname + "/public/upload/index.html"); </strong></p>
+    <p style="margin-right: 410px">});</p> <br>
     <img src="../../images/npm/Billede%20uden%20titel8.png" alt="#" id="npmImages4">
     <p>*The app.use(express.json()); and app.use(express.urlencoded()); </p>
     <p>are something we will be explained on the RESTful page*</p>
@@ -87,5 +121,6 @@
 
 
 <script src="/upload/upload.js"></script>
+<script src="upload/npm/npm.js"></script>
 </body>
 </html>

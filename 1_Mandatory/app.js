@@ -26,13 +26,6 @@ app.get("/restful", (req, res) => {
     return res.sendfile(__dirname + "/public/upload/restful/restful.html");
 });
 
-app.get("/ajax", (req, res) => {
-    return res.sendfile(__dirname + "/public/upload/ajax/ajax.html");
-});
-
-app.get("/test", (req, res) => {
-    return res.sendfile(__dirname + "/public/upload/test.html");
-});
 
 /*
 http://sahatyalkabov.com/jsrecipes/#!/backend/parsing-query-string-post-and-url-parameters

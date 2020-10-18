@@ -25,9 +25,19 @@ $("#car_Table").css({
     "color": "white"
 });
 
-$("#postman").css("margin-top", "100%")
+$("#postman").css("margin-top", "100%");
+$("#postman2").css("margin-top", "140%");
+
+$(".postman_img").css({
+    "height": "400%",
+    "width": "550%",
+    "padding-bottom": "20%"
+});
 
 
+$("#get_postman_id").css("margin-left", "500%");
+
+$("#postmanVid").css("margin-left", "0%");
 
 /*
 GOING TO ADD THIS IN THE FUTURE, WHEN WE LEARN ABOUT IT

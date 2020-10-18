@@ -43,12 +43,6 @@ app.get("/rest", (req, res) => {
     res.send("Your query: " + req.query.q + "\n");
 });
 
-app.post("/restful", (req, res) => {
-    console.log(req.body);
-    return res.send({data: req.body});
-});
-
-
 
 
 
@@ -59,8 +53,6 @@ let cars = [
     {id: 2, model: "Mitsubishi"},
     {id: 3, model: "BMW"}
 ];
-
-
 
 
 app.get("/cars", (req, res) => {

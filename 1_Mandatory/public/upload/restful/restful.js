@@ -7,6 +7,7 @@ $(".methodShow img").css("margin-left", "4%");
 
 $("p").css("font-weight", "bold");
 
+$("h1").css("text-decoration", "underline");
 
 $(".space1").css("margin-left", "2.5em");
 
@@ -24,11 +25,15 @@ $("#car_Table").css({
     "color": "white"
 });
 
+$("#postman").css("margin-top", "100%")
 
 
+
+/*
+GOING TO ADD THIS IN THE FUTURE, WHEN WE LEARN ABOUT IT
+UNFORTUNATELY I AM RUNNING OUT OF TIME
 
 //CAR DEMO
-
 
 let nextCarId = 3;
 
@@ -41,10 +46,11 @@ let cars = [
 function loadArray() {
     for (let i = 0; i < cars.length; i++) {
         $("#cars").append("<p>" + cars[i].id + ": " + cars[i].model + "</p>");
-    };
+    }
+    ;
 };
 
-function deleteAll(){
+function deleteAll() {
     cars = ""
 }
 
@@ -56,13 +62,13 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function (){
-    $("#delete_All").click(function (){
+$(document).ready(function () {
+    $("#delete_All").click(function () {
         let element = $("#cars");
         element.empty()
         deleteAll()
     });
 });
 
-
+ */
 

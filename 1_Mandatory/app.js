@@ -43,71 +43,73 @@ app.get("/rest", (req, res) => {
     res.send("Your query: " + req.query.q + "\n");
 });
 
+app.post("/restful", (req, res) => {
+    console.log(req.body);
+    return res.send({data: req.body});
+});
 
 
-app.get("/cars", (req, res) =>{
+app.get("/cars", (req, res) => {
     return res.send(cars);
 });
 
 
-app.get("/cars/:id", (req, res)=>{
+app.get("/cars/:id", (req, res) => {
     const car = cars.find(car => car.id === Number(req.params.id));
-    return res.send({data : car});
+    return res.send({data: car});
 });
 
 
-app.post("/cars", (req, res) =>{
+app.post("/cars", (req, res) => {
     console.log(req.body);
     const newCar = req.body;
     newCar.id = nextCarId++;
     cars.push(newCar);
-    return res.send({data : cars});
+    return res.send({data: cars});
 });
 
 // find car -> get id -> overwrite in array
 //cars = cars.map(car => car.id === Number(req.params.id));
-app.patch("/cars/:id", (req, res) =>{
-    cars = cars.map(car =>{
-        if(car.id === Number(req.params.id)){
+app.patch("/cars/:id", (req, res) => {
+    cars = cars.map(car => {
+        if (car.id === Number(req.params.id)) {
             return {...car, ...req.body, id: car.id}; //spread operator
         }
         return car;
     });
-    return res.send({data : cars})
+    return res.send({data: cars})
 });
 
-app.delete("/cars/:id", (req, res) =>{
+app.delete("/cars/:id", (req, res) => {
     cars = cars.filter(car => car.id !== Number(req.params.id));
     return res.send({data: cars});
 });
-
-let cars = [
-    {id: 1, model: "Jaguar"},
-    {id: 2, model: "Mitsubishi"},
-    {id: 3, model: "BMW"}
-];
-
-
 
 
 //Kig lige lidt ekstra på denne hvis der er tid.
 app.get("/proxy", (req, res) => {
     fetch("https://en.wikipedia.org/wiki/Node.js")
         .then(result => result.textConverted())
-        .then(body =>{
+        .then(body => {
             return res.send(body);
         });
 });
 
 
-
-
-
 const port = process.env.PORT || 80;
-app.listen(80, (error) =>{
+app.listen(80, (error) => {
 
-    if (error){
+    if (error) {
         console.log("Error starting server " + error);
     }
     console.log("server is running on port", Number(port));
 });
+
+
+let nextCarId = 3;
+
+let cars = [
+    {id: 1, model: "Jaguar"},
+    {id: 2, model: "Mitsubishi"},
+    {id: 3, model: "BMW"}
+];

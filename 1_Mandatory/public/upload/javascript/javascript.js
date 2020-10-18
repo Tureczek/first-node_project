@@ -24,11 +24,19 @@ document.querySelector("#callbackButton")
     });
 
 
+
 $(".firstExample").css({
     "font-weight" : "bold",
     "margin-left" : "7%"
 });
 
-$("#moreExamples").css("text-decoration", "underline");
 $(".space1").css("margin-left", "2.5em");
+
 $(".space2").css("margin-left", "5em");
+
+$("#app_js").css({
+   "height": "50%",
+    "width": "46%"
+});
+
+$("#moreExamples").css("text-decoration", "underline");

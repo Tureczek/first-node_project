@@ -15,6 +15,8 @@ $(".space2").css("margin-left", "5em");
 
 $(".space3").css("margin-left", "7.2em");
 
+
+
 $("#car_Array").css({
     "margin-left": "5%",
     "width": "15%"
@@ -38,6 +40,9 @@ $(".postman_img").css({
 $("#get_postman_id").css("margin-left", "500%");
 
 $("#postmanVid").css("margin-left", "0%");
+
+
+
 
 /*
 GOING TO ADD THIS IN THE FUTURE, WHEN WE LEARN ABOUT IT

@@ -49,6 +49,20 @@ app.post("/restful", (req, res) => {
 });
 
 
+
+
+
+let nextCarId = 4;
+
+let cars = [
+    {id: 1, model: "Jaguar"},
+    {id: 2, model: "Mitsubishi"},
+    {id: 3, model: "BMW"}
+];
+
+
+
+
 app.get("/cars", (req, res) => {
     return res.send(cars);
 });
@@ -104,12 +118,3 @@ app.listen(80, (error) => {
     }
     console.log("server is running on port", Number(port));
 });
-
-
-let nextCarId = 3;
-
-let cars = [
-    {id: 1, model: "Jaguar"},
-    {id: 2, model: "Mitsubishi"},
-    {id: 3, model: "BMW"}
-];

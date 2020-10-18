@@ -9,7 +9,7 @@
     "nodemon": "^2.0.5"
   },
   "scripts": {
-    "start-dev" : "cross-env PORT=8080 nodemon app.js",
-    "start-prod" : "cross-env PORT=5000 node app.js"
+    "start-dev": "cross-env PORT=8080 nodemon app.js",
+    "start-prod": "cross-env PORT=5000 node app.js"
   }
 }

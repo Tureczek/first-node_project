@@ -11,10 +11,12 @@ DELETE          /cars/id
 */
 
 let nextCarId = 3;
+
 // unary expression
-// const port = process.env.PORT || 80;
+ const port = process.env.PORT || 80;
+
 //ternery expression
-const port = process.env.PORT ? process.env.PORT : 80;
+//const port = process.env.PORT ? process.env.PORT : 80;
 
 //enviromental variablre
 // If port is defined then that should be the port, otherwise fallback to port 80

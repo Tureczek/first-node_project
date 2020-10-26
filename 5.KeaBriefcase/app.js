@@ -15,11 +15,11 @@ console.log(footerPage)
 app.get("/", (req, res) => {
     res.send(uploadPage + footerPage);
 });
-/*
-app.get("/", (req, res) =>{
-    return res.sendfile( __dirname + "/public/upload/upload.html");
-});
-*/
+
+//app.get("/", (req, res) =>{
+//    return res.sendfile( __dirname + "/public/upload/upload.html");
+//});
+
 app.get("/about", (req, res) =>{
     return res.sendfile( __dirname + "/public/about/about.html");
 });

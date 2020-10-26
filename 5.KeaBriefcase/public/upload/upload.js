@@ -1,9 +1,18 @@
+
+const currentYear = new Date().getFullYear();
+
+const footerCopyright = document.getElementById("footer-copyright");
+const copyrightElement = document.createTextNode("©" + currentYear);
+
+footerCopyright.appendChild(copyrightElement);
+
+
 // document.getElementById("form-submit").addEventListener("click", () =>{})
 
 function handleFormSubmitted(){
     const formMessage = document.getElementById("messageBox").value;
     console.log(formMessage);
-    $.get("/form?message="+formMessage, (response) =>{ //Kombinere flere med "^" eller "&"
+    $.get("/form?message=" + formMessage, (response) =>{ //Kombinere flere med "^" eller "&"
         console.log(response);
     });
 }

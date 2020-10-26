@@ -8,7 +8,8 @@ app.use(express.static("public"));
 
 // Read the upload page and serve it on /
 const uploadPage = fs.readFileSync(__dirname + '/public/upload/upload.html', 'utf-8'); // Here you could replace 'utf-8' with toString();
-const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html",).toString();
+const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html").toString();
+const aboutPage = fs.readFileSync(__dirname + "/public/about/about.html").toString();
 //console.log(uploadPage)
 console.log(footerPage)
 
@@ -20,10 +21,15 @@ app.get("/", (req, res) => {
 //    return res.sendfile( __dirname + "/public/upload/upload.html");
 //});
 
+/*
 app.get("/about", (req, res) =>{
     return res.sendfile( __dirname + "/public/about/about.html");
 });
 
+app.get("/about", (req, res) => {
+   res.send(aboutPage + footerPage);
+});
+*/
 app.get("/download", (req, res) =>{
     return res.sendfile( __dirname + "/public/download/download.html");
 });

@@ -1,15 +1,23 @@
 const  express = require("express");
 const fetch = require("node-fetch");
 const app = express();
+const fs = require("fs"); //File System
 app.use(express.json()); // Disse to linjer er for at kunne bruge post
 app.use(express.urlencoded({extended: true})) // dette er for at kunne bruge url i upload.js
-
 app.use(express.static("public"));
 
+// Read the upload page and serve it on /
+const uploadPage = fs.readFileSync(__dirname + '/public/upload/upload.html', 'utf-8'); // Here you could replace 'utf-8' with toString();
+const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html",).toString();
+//console.log(uploadPage)
+console.log(footerPage)
 
-app.get("/", (req, res) =>{
-    return res.sendfile( __dirname + "/public/upload/upload.html");
+app.get("/", (req, res) => {
+    res.send(uploadPage + footerPage);
 });
+//app.get("/", (req, res) =>{
+//    return res.sendfile( __dirname + "/public/upload/upload.html");
+//});
 
 app.get("/about", (req, res) =>{
     return res.sendfile( __dirname + "/public/about/about.html");
@@ -25,11 +33,9 @@ app.get("/form",(req, res) => {
     return res.send({data : req.query});
 });
 
-app.post("/form", (req, res) =>{
-    console.log(req.body);
-    return res.send({data : req.body});
-});
-
+//import the rout and put it below
+const uploadRouter = require("./routes/upload.js");
+app.use(uploadRouter);
 
 
 

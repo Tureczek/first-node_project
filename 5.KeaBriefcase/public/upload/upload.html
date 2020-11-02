@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Upload</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/upload/upload.css">
-    <link rel="stylesheet" href="/upload/global.css">
-</head>
-<body>
-<!-- Create a logo -->
-<a href="/" id="logo"><img id="logo-img" src="../upload/assets/image_processing20200424-23023-rk91iz.png"></a>
-<a href="/download" id="downloadPage" style="margin-left: 45%"><img id="download-img" src="../upload/assets/Dtafalonso-Android-Lollipop-Downloads.ico"></a>
-<a href="/about" id="aboutPage" style="margin-left:90%"><img src="../upload/assets/Very-Basic-About-icon.png" id="about-logo"></a>
-<h1>Upload</h1>
-
-
 <!-- implement message and done -->
+<!--
 <div id="form">
     <textarea name="message-box" id="messageBox" cols="30" rows="10"></textarea>
     <button id="form-submit-get" onclick="handleFormSubmitted()">Submit GET</button>
     <button id="form-submit-post" onclick="handleFormSubmittedPost2()">Submit POST</button>
 
 </div>
-<form action="/form" method="post" onsubmit="validateForm(); return false;"> <!-- onsubmit="return false; kan bruges til form validation -->
+-->
+
+<form action="/form" method="post" onsubmit="validateForm(); return false;"> <!-- onsubmit="return false; can be used for validation -->
     <textarea id="messageBoxSubmit" cols="30" rows="10" name="message"></textarea>
     <button id="form-submit-post-submit" type="submit">Submit button</button>
 </form>
-//Send the message back to the backend on GET /form and console log it there
 <script src="/upload/upload.js"></script>
 
 </body>

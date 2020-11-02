@@ -1,9 +1,18 @@
 const router = require("express").Router(); //Dummy route, da det ikke er en server instans
 const path = require("path"); //path.join
+const crypto = require("crypto");
 
-router.post("/form", (req, res) =>{
-    console.log(req.body);
-    return res.send({data : req.body});
+const uploads = [];
+
+router.get("/uploads/:id", (req, res) => {
+    const foundUpload = uploads.find(upload => upload.id === req.params.id);
+    return res.send({data: foundUpload});
+});
+
+router.post("/uploads", (req, res) => {
+    const id = crypto.randomBytes(18).toString("hex");
+    uploads.push({...req.body, id});
+    return res.send({id});
 });
 
 // ???

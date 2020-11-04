@@ -37,7 +37,7 @@ app.get("/about", (req, res) => {
 
 /*
 app.get("/download", (req, res) =>{
-    return res.sendfile( __dirname + "/public/download/download.html");
+    return res.sendfile( _  _dirname + "/public/download/download.html");
 });
 */
 app.get("/download/:id", (req, res) =>{

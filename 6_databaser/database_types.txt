@@ -1,0 +1,32 @@
+Relationel Database
+-------------------
+MySQL
+msSQL
+Oracle
+Mariadb
+postgres
+couchdb
+sqllite
+
+no-sql database
+===============
+
+Document Database
+-----------------
+mongodb
+
+
+Graph Database
+--------------
+neo4j
+
+in-memory Database
+-------------------
+H2
+
+Object Database
+---------------
+realm.io
+
+Key- value Database
+-------------------

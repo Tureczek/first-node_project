@@ -1,0 +1,51 @@
+Collections == Tables
+Mongo db gemmer i JSON - Mongo er en shell
+
+Collections
+[
+    {name: "Nicholas"},
+    {type: "human", favoritNumber: 12}
+]
+
+use mySQL:
+Konsistent data:
+Giver garanti for data integritet
+---------------------------------
+
+---------------------------------
+
+MySQL tjekker på database niveau
+mongodb kan tjekke på database niveau men kræver at
+man er sikker i applikationsniveauet.
+
+Ting kan gå galt med mongodb
+
+
+Use mongodb:
+Ikke konsistent data
+Ved ikke hvad man skal lave, derfor er det godt at kunne ændre hele tiden.
+rapid prototyping.
+
+Kan kombineres, mongodb bruges til log.
+            morgan fra npm i kunne bruges til at logge.
+-----------------
+
+mongood orm
+
+Commandoer:
+CRUD
+C insert, R find, U update, D delete(One/Many)
+
+show dbs
+use memes
+db.createCollection("favorit")
+db.favorits.insert({type: "Kaj Kage"})
+db.favorits.insert({top10: []}) <-- Laver et array
+db.favorits.find()
+db.favorits.update() <- tager imod criteria query/ search query brug $set: {} hvis den ikke skal slette det andet.
+db.favorits.update({top10: []}, {$push: {top10: {"Hide yo kids"}}) <- add to array
+db.favorits.update({top10: []}, {$pop: {top10: 2}) <- sletter de to sidste elementer i array.
+
+
+db.favorits.deleteOne({type: "kaj Kage"})
+db.favorits.deleteMany({})

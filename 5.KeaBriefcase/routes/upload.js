@@ -12,6 +12,7 @@ router.get("/uploads/:id", (req, res) => {
 router.post("/uploads", (req, res) => {
     const id = crypto.randomBytes(18).toString("hex");
     uploads.push({...req.body, id});
+    console.log(uploads)
     return res.send({id});
 });
 

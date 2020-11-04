@@ -10,9 +10,7 @@ MongodbClient.connect(connectionURL, {useUnifiedTopology: true}, (error, client)
     const favorits = memes.collection("favorits");
 
     favorits.find({person: "Obi Wan"}).toArray((error, foundFavorits) => {
-        if (error) throw new Error(error);;
-        console.log(foundFavorits);
+        if (error) throw new Error(error);
         client.close();
     });
-
 });

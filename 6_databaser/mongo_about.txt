@@ -47,5 +47,5 @@ db.favorits.update({top10: []}, {$push: {top10: {"Hide yo kids"}}) <- add to arr
 db.favorits.update({top10: []}, {$pop: {top10: 2}) <- sletter de to sidste elementer i array.
 
 
-db.favorits.deleteOne({type: "kaj Kage"})
+db.favorits.deleteOne({type: "Kaj Kage"})
 db.favorits.deleteMany({})

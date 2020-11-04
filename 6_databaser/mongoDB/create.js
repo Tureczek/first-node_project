@@ -18,4 +18,5 @@ MongodbClient.connect(connectionURL, {useUnifiedTopology: true}, (error, client)
         //Skal lukke db her, ellers kan der opstå fejl
         client.close();
     });
+    
 });

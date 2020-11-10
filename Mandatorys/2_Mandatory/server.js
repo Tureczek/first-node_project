@@ -10,7 +10,7 @@ app.use(express.json())
 const users = [];
 
 app.get('/users', (req, res) => {
-    MongoClient.connect(connectionURL, {useUnifiedTopology: true}, (error, client) => {
+  /*  MongoClient.connect(connectionURL, {useUnifiedTopology: true}, (error, client) => {
         if(error) throw new Error(error);
 
         const user = client.db("mand_users");
@@ -21,8 +21,8 @@ app.get('/users', (req, res) => {
         });
 
     });
-    res.json(foundUsers)
-//    res.json(users)
+    res.json(foundUsers) */
+    res.json(users)
 });
 
 app.post("/users", async (req, res) => {

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/upload/upload.css">
+    <link rel="stylesheet" href="/upload/javascript/javascript.css">
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="" alt="">HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/npm">NPM</a></li>
+                <li><a href="/jquery">JQUERY</a></li>
+                <li><a href="/javascript">JAVASCRIPT</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/restful">RESTFUL</a></li>
+                        <li><a href="#">FUTURE PAGES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container text-center"><h1>Welcome to the JavaScript page!</h1>
+    <p>
+    <h3>
+        <li><strong> What is Javascript?</strong></li>
+    </h3>
+    <br><strong>
+        JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia,
+        <br>
+        animate images, and pretty much everything else. <br><br>
+        <li>JavaScript is the programming language for the web.</li>
+        <li>JavaScript can update and change both HTML and CSS.</li>
+        <li>JavaScript can calculate, manipulate and validate data.</li>
+    </strong></p></div>
+
+<div class="exampleRow">
+    <div class="firstExample">
+        <h2>A quick look at what JavaScript can do:</h2>
+        <p>Only HTML code of a paragraph with a player</p>
+        <img src="/upload/javascript/assets/HTML_paragraph.png" alt="HTML paragraph">
+        <br><br>
+        <p>Player 1: Nicholas</p>
+        <br><br>
+        <p>Then we add some CSS for styling purposes:</p>
+        <img src="/upload/javascript/assets/CSS_paragraph.png" alt="CSS paragraph">
+        <br><br>
+        <p class="pStyle">Player 1: Nicholas</p>
+        <br><br>
+        <p>Now lets try to add a JavaScript function to the styled paragraph, the notation "#" <br>
+            in the selector means that we are referring directly to a specific id. If <br>
+            we made a "." (dot) notation, we would have referred to a class </p>
+        <img src="/upload/javascript/assets/js_paragraph.png" alt="js paragraph">
+        <br><br>
+        <p class="pStyle" id="pStyle2">Player 1: Nicholas</p><br>
+        <p><em>Try press the button.</em></p>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 50%"></div>
+<div class="stripeTop"></div>
+<div class="bodyColor" style="text-align: center"><h1>JavaScript functions</h1></div>
+<br><br><br><br><br><br>
+<div class="stripeBottom"></div>
+
+<div class="container text-center" style="margin-top: 0%">
+    <p>A function in JavaScript is a block of code that will be exercuted when you call it.</p>
+    <img src="/upload/javascript/assets/function_template.png" alt="Function syntax">
+    <p>It is also possible to put arguments into the function.
+        When you call a function, you can pass along some values to it, these values are called arguments or parameters.
+        These arguments can then be used inside of the function.
+        You can send as many arguments as you like, separated by commas (,)
+        To use the arguments inside of the function, you must declare the arguments as variables when defining the
+        function
+        The variables and arguments must be in expected order.
+        this means that the first argument gets assigned to the first variable.
+    </p><br><br>
+    <h3>JavaScript Callback functions</h3>
+    <p><h4>The Callback function which is being used in the app.js file lets take a look at how this works:</h4></p><br>
+</div>
+
+<div class="exampleRow">
+    <div class="firstExample">
+        <p style="margin-top: 5%">Let's start by looking at a simple example. <br>
+            We got two functions: taskOne() and taskTwo(). <br>
+            The only thing these does is logging some test to the console. <br>
+            As seen in the image to the right, the tasks is printed accordingly in the console <br>
+            But if w then wanted to have taskOne being logged after taskTwo, we could use a build-in function <br>
+            in JavaScript, called setTimeout. <br>
+            This function allows us to set a timer on when a function should be run in JavaScript. <br>
+            The following </p>
+        <p style="margin-top: 20%">
+            In this setTimeout function we see in the picture, vi take two arguments, the first <br>
+            is the function of taskOne - Which means that we are taking a function and <br>
+            putting it inside another function. <br>
+            Then we tell the function for how long it should wait before executing the function, <br>
+            this is calculated in milliseconds, we put in 2000 milliseconds, which is the equivalent to <br>
+            2 seconds.
+            As expected the function of taskOne is executed after the function of taskTwo. We can <br>
+            confirm this by inspecting the page with the "F12" key, and examine the console.
+        </p>
+        <br><br>
+        <p>Now we are trying to make a callback function by placing a button underneath <br>
+            this text. The callback function only activates, when a user presses the button. <br>
+            This can again be examine by pressing "F12" and keeping an eye on the console log <br>
+            when pressing the button. <br>
+            <button id="callbackButton">Click me</button>
+            <br>
+            -So in simple words,callback function is when a function is called after an <br>
+            something has happened.
+            Below you can see the code, which makes this possible.
+        </p>
+    </div>
+    <div class="firstExample">
+        <img src="/upload/javascript/assets/callback_function_1.png" alt="taskOne and Two">
+        <img src="/upload/javascript/assets/timeOut.png" alt="timeOut" style="margin-top: 10%">
+    </div>
+</div>
+
+<div class="container text-center" style="margin-top: 35%">
+    <img src="/upload/javascript/assets/Callback_event.png" alt="taskOne and Two">
+</div>
+<div class="exampleRow" style="margin-top: 10%">
+    <div class="firstExample" id="moreExamples">
+        <p>
+        <h2>There are other types of Callback functions. </h2></p>
+    </div>
+    <div class="secondExample"><h4>Anonymous function:</h4>
+        <p class="space1">setTimeout(function(){ <br>
+        <p class="space2">console.log("A user has pressed the Try me button");</p>
+        <p class="space1">}, 2000);
+        </p> <br><br>
+        <h4>Arrow functions:</h4>
+        <p class="space1">setTimeout(() => {
+        <p class="space2">console.log("A user has pressed the Try me button");</p>
+        <p class="space1">}, 2000);
+        </p>
+    </div>
+    <div class="exampleRow">
+        <div class="firstExample">
+            <h2>App.js</h2>
+            <p>It is also in JavaScript, this entire page runs. The App.js file is where we
+                put in all of our mapping commands. <br><br>
+            We are returning the response in our get mappings as a file. In this example <br>
+            it is returning "__dirname", which is the absolute path to our project, then we add <br>
+            the path to the specific folder in which the different HTML pages are stored.</p>
+        </div>
+        <div class="secondExample" id="app_js">
+            <img src="/upload/javascript/assets/App_js.png" alt="App.js">
+        </div>
+    </div>
+</div>
+
+    <script src="/upload/upload.js"></script>
+    <script src="/upload/javascript/javascript.js"></script>
+</body>
+</html>

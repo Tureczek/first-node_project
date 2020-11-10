@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/upload/upload.css">
+    <link rel="stylesheet" href="/upload/jquery/jquery.css">
+</head>
+<body>
+<!-- navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+            </button>
+            <a class="navbar-brand" href="/">HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/npm">NPM</a></li>
+                <li><a href="/jquery">JQUERY</a></li>
+                <li><a href="/javascript">JAVASCRIPT</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/restful">RESTFUL</a></li>
+                        <li><a href="#">FUTURE PAGES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container text-center">
+    <h1>Welcome to the the jQuery page!</h1>
+    <br>
+    <h2>What is jQuery?</h2>
+    <br>
+    <p>jQuery is a JavaScript library which was based on the principles, that you should be <br>
+        able to do more while writing less. The jQuery library is to included on the HTML page <br>
+        in the header section, in a script tag.</p>
+    <div class="jqExampleBox" id="jqSlideBox">
+        https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+    </div>
+    <button id="libButton">Press me!</button>
+    <p>Jquery can be used for HTML DOM and CSS manipulation, and it includes AJAX which has the <br>
+        $. notation. <br>
+        The basic syntax of jQuery looks like the following:</p> <br>
+    <div class="jqExampleBox" id="secondExample">
+        $(selector).methodOrFunction();
+    </div>
+
+    <br><br><br><br>
+
+    <p>Before adding jQuery to the page, it is a good idea to make sure that the the HTML document <br>
+        and its elements are fully loaded. Otherwise there could be occur complications with the jQuery code. <br>
+        The way to do this is by make a "document ready" event. <br>
+        If we take the above code for example, where we pressed a button, and then it showed the URL to put <br>
+        inside the script tag. We made sure that the document was ready before the jQuery function could be executed.
+    </p> <br>
+    <div class="jqExampleBox" id="documentReady" style="text-align: left">
+        <p>$(document).ready(function () {</p>
+        <p>$("#libButton").click(function () {</p>
+        <p>$("#jqSlideBox").slideToggle(2000);</p>
+        <p>});</p>
+        <p>});</p>
+    </div>
+    <p style="margin-top: 22%">But it is not necessary to use the document ready on every jQuery method. The little
+        snippet
+        <br> you see above is made by different jQuery methods, both for styling and placement. To make a box as the
+        <br> one above.</p>
+</div>
+<div class="pictureContainer">
+    <p>First off we have the HTML code</p>
+    <img src="/upload/jquery/assets/documentReadyHtml.png" alt="Document ready HTML">
+</div>
+<div class="pictureContainer">
+    <p>Second we use some css to style a box, so that we can use the template multiple times</p>
+    <img src="/upload/jquery/assets/documentReadyCss.png" alt="Document ready HTML">
+</div>
+<br><br><br>
+<div class="pictureContainer">
+    <p>Then we use jQuery, to style the box on its id, we can see that by the "#" reference</p>
+    <img src="/upload/jquery/assets/documentReadyJquery.png" alt="Document ready HTML">
+</div>
+<div class="pictureContainer">
+    <p>Lastly we are pushing the text inside the box, to follow proper code syntax. Notice here that the (document).ready has not
+    been called. <br>
+    This shows that it is not necessary to have it, but still it is a good idea.</p>
+    <img src="/upload/jquery/assets/documentReadyChild.png" alt="Document ready HTML">
+</div>
+
+<script src="/upload/upload.js"></script>
+<script src="/upload/jquery/jquery.js"></script>
+</body>
+
+</html>

@@ -49,3 +49,7 @@ db.favorits.update({top10: []}, {$pop: {top10: 2}) <- sletter de to sidste eleme
 
 db.favorits.deleteOne({type: "Kaj Kage"})
 db.favorits.deleteMany({})
+
+
+
+Connecting node to mongodb: https://www.youtube.com/watch?v=fgTGADljAeg <-- This fucking guy!!

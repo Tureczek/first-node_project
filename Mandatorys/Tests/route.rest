@@ -5,23 +5,23 @@ GET http://localhost:3000/subscribers
 GET http://localhost:3000/subscribers/5fafc5b51a7fed3c040c8727
 
 ###
-
+//Create
 POST http://localhost:3000/subscribers
 Content-Type: application/json
 
 {
-"name": "Nicholas",
+"name": "Sigma",
 "subscribedToChannel": "Web Dev Simplified",
   "password": "Test123"
 }
 
 ###
 
-DELETE http://localhost:3000/subscribers/
+DELETE http://localhost:3000/subscribers/5fb1562157db4c47b8f0d618
 
 ###
 
-PATCH http://localhost:3000/subscribers/5fafc5b51a7fed3c040c8727
+PATCH http://localhost:3000/subscribers/5fb1562157db4c47b8f0d618
 Content-Type: application/json
 
 {
@@ -34,6 +34,8 @@ POST http://localhost:3000/subscribers/login
 Content-Type: application/json
 
 {
-"name": "Nicholas",
+"name": "Sigma",
   "password": "Test123"
 }
+
+###

@@ -4,3 +4,5 @@
 # Project exclude paths
 /2.Our_First_API/node_modules/
 /2.Our_First_API/HomeAssignment/node_modules/
+# Editor-based HTTP Client requests
+/httpRequests/

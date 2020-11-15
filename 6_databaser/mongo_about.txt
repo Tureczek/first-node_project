@@ -53,3 +53,4 @@ db.favorits.deleteMany({})
 
 
 Connecting node to mongodb: https://www.youtube.com/watch?v=fgTGADljAeg <-- This fucking guy!!
+Auth system: https://jasonwatmore.com/post/2018/06/14/nodejs-mongodb-simple-api-for-authentication-registration-and-user-management#users-controller-js

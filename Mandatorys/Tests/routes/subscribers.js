@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Subscriber = require("../models/subscriber.js")
+const Subscriber = require("../models/subscriber.js");
+const bcrypt = require("bcrypt");
+
 
 // Getting all
 router.get("/", async (req, res) => {
@@ -19,9 +21,12 @@ router.get("/:id", getSubscriber, (req, res) => {
 
 // Creating One
 router.post("/", async (req, res) => {
+
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const subscriber = new Subscriber({
         name: req.body.name,
-        subscribedToChannel: req.body.subscribedToChannel
+        subscribedToChannel: req.body.subscribedToChannel,
+        password: hashedPassword
     })
     try {
         const newSubscriber = await subscriber.save();
@@ -30,6 +35,23 @@ router.post("/", async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 });
+
+router.post("/login", async (req, res) => {
+   const user = Subscriber.findById(user => user.name === req.body.name)
+    if (user == null) {
+        return res.status(400).send("Cannot find user");
+    }
+    try{
+        if(await bcrypt.compare(req.body.password, user.password)){
+            res.send("Success");
+        } else {
+            res.send("Not allowed");
+        }
+    } catch (err){
+        res.status(500).send();
+    }
+});
+
 
 // Updating One
 router.patch("/:id", getSubscriber, async (req, res) => {
@@ -52,7 +74,7 @@ router.delete("/:id", getSubscriber, async (req, res) => {
     try {
         await res.subscriber.remove()
         res.json({ message:  "Deleted Subscriber" });
-    }catch (err) {
+    }catch (err) {f
         res.status(500).json({ message: err.message })
     }
 });

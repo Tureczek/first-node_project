@@ -10,8 +10,9 @@ POST http://localhost:3000/subscribers
 Content-Type: application/json
 
 {
-"name": "Amazing Person",
-"subscribedToChannel": "Web Dev Simplified"
+"name": "Nicholas",
+"subscribedToChannel": "Web Dev Simplified",
+  "password": "Test123"
 }
 
 ###
@@ -25,4 +26,14 @@ Content-Type: application/json
 
 {
 "name": "New Name"
+}
+
+###
+
+POST http://localhost:3000/subscribers/login
+Content-Type: application/json
+
+{
+"name": "Nicholas",
+  "password": "Test123"
 }

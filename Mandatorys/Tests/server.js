@@ -28,7 +28,7 @@ app.get('/users', (req, res) => {
 app.post("/users", async (req, res) => {
     try {
         // const salt = await bcrypt.genSalt() 
-        //^^ this is gonna be a oneliner on line 18. 
+        //^^ this is gonna be a oneliner.
         // instead of using the const salt, we put in the number 10.
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         //console.log(salt);

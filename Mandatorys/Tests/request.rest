@@ -28,3 +28,8 @@ Content-Type: application/json
 {
 "name": "Nicholas"
 }
+
+###
+
+POST http://localhost:3000/users1
+Content-Type: application/json

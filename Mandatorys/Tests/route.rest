@@ -34,7 +34,8 @@ POST http://localhost:3000/subscribers/login
 Content-Type: application/json
 
 {
-"name": "Sigma"
+"name": "Sigma",
+  "password": "Test123"
 }
 
 ###

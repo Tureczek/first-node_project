@@ -6,12 +6,10 @@
 </head>
 <body>
 <h1>Hello World</h1>
-<form action="/action_page.php">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" value=""><br>
-<!--    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="Password" value=""><br><br> -->
-    <input type="submit" onclick="findUsers()" value="Submit">
+<form action="/auth/login" method="post">
+    <input type="text" name="username"><br>
+    <input type="password" name="password" ><br>
+    <input type="submit" value="Submit">
 </form>
 <script src="./login.js"></script>
 </body>

@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
 
 // Getting One
 router.get("/:id", getSubscriber, (req, res) => {
-    res.json(res.subscriber);
+    res.json(res.Subscriber);
 });
 
 // Creating One

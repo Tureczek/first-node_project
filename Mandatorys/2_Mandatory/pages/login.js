@@ -4,6 +4,8 @@ const connectionURL = "mongodb://localhost:27017";
 
 
 function findUsers(username){
+    const form = document.getElementById("form")
+
     MongoClient.connect(connectionURL, {useUnifiedTopology: true}, (error, client) => {
         if (error) throw new Error(error);
 
@@ -19,5 +21,5 @@ function findUsers(username){
 
 }
 
-
+findUsers("Sigma")
 

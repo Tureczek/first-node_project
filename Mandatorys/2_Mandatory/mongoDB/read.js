@@ -22,26 +22,6 @@ async function findOneUser(userName) {
 }
 
 
-async function getSubscriber(req, res, next) {
-    let subscriber;
-    let password;
-    try {
-        subscriber = await Subscriber.find({name: req.body.username})
-        //subscriber = await Subscriber.find( subscriber => subscriber.name === req.body.name)
-        if (subscriber == null) {
-            console.log("it is null ")
-            return res.status(400).json({message: "Cannot find subscriber"})
-        }
-    } catch (err) {
-        return res.status(500).json({message: err.message})
-    }
-    console.log("Found something")
-    console.log(subscriber)
-    res.subscriber = subscriber
-    next()
-}
 
-// module.exports = authenticate;
 
-module.exports = getSubscriber;
 module.exports = findOneUser;

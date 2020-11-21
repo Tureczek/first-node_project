@@ -21,6 +21,8 @@ router.post("/auth/login", (req, res) => {
 });
 
 
+
+
 router.get("/auth/signout", (req, res) => {
     return res.status(501).send({data: "ok"})
 });

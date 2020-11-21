@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const fetch = require("node-fetch");
 const app = express();
 const mongoose = require("mongoose");
 app.use(express.json());
@@ -9,3 +10,20 @@ const database = mongoose.connection;
 database.on("error", (error) => console.error(error));
 database.on("open", () => console.error("Connected to Database"));
 
+
+function getUploads(){
+    fetch("/database").then(result => result.json())
+        .then(json => {
+            console.log(json.data[0].name)
+            for(let i = 0; i<2; i++){
+                const name = json.data[i].name;
+                //$('#database').append('<li>' + name + '</li>')
+                console.log(name)
+            }
+        })
+}
+
+getUploads();
+
+console.log($)
+//$('database').append('<li>Hej</li>')

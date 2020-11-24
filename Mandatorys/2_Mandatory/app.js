@@ -34,9 +34,9 @@ app.get('/database', (req, res) => {
     });
 })
 
-app.get('/show', ((req, res) => {
-    res.sendFile(__dirname + '/mongoDB/database.html');
-}))
+app.get("/show", (req, res) => {
+
+})
 
 app.listen(port, (error)=>{
     if (error) {

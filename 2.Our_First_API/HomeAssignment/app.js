@@ -119,13 +119,13 @@ app.get("/querystring", (req, res) =>{
    return res.send({query : req.query});
 });
 
-// Querystrings og path variable er 2 metoder til at sende data gennem url
+// Query strings og path variable er 2 metoder til at sende data gennem url
 app.get("/message/:message", (req, res) =>{
     return res.send({message : req.params.message,
         queryString: req.query});
 });
 
-//boddy ligger i request
+//body ligger i request
 app.post("/showmethebody", (req, res) => {
     console.log(req.body);
     return res.send(req.body);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+
+<h1>Welcome to the chat</h1>
+
+
+
+<div>
+    <textarea name="" id="chat-text" cols="30" rows="10"></textarea>
+    <button onclick="sendMessage()">send</button>
+</div>
+
+
+<script>
+    const socket = io();
+
+
+    function sendMessage() {
+        const message = document.getElementById("chat-text").value;
+        document.getElementById("chat-text").value = "";
+
+        console.log(message);
+    }
+</script>
+
+</body>
+</html>

@@ -1,3 +1,7 @@
+
+
+if problems with io.on -  "npm install @types/socket.io"
+
 io.on("connection", (socket) => {
 
   // sending to the client

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+
+<h1>Welcome to the chat</h1>
+
+
+<div>
+    <textarea name="" id="chat-text" cols="30" rows="10"></textarea>
+    <button onclick="sendMessage()">send</button>
+</div>
+
+<h3>Messages</h3>
+<div id="message-container"></div>
+<form id="send-container">
+<ul id="messages">
+</ul>
+</form>
+
+<script>
+    const socket = io();
+
+    function sendMessage() {
+        const message = document.getElementById("chat-text").value;
+        document.getElementById("chat-text").value = "";
+        console.log(message);
+
+
+
+        // calling the event
+        socket.emit("client submit chat message", {data: message});
+
+        socket.on("server send message", data => {
+
+            //const messageElement = document.createElement('div')
+            //messageElement.innerText = message;
+            //document.getElementById('message-container').append(messageElement);
+            let ul = document.getElementById("messages");
+            let li = document.createElement('li');
+            li.append(document.createTextNode(message));
+            ul.append(li);
+
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

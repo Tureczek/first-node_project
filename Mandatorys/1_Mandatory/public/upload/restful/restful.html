@@ -146,8 +146,8 @@
         <p>Taking into consideration that the array of cars which we have created is in the form of JSON data. We have
             to add something
             <br>in the top of our code, to be able to parse JSON date. We do that through express, by notating
-            "app.use(express.json());" and
-            <br> "app.use(express.urlencoded());" in the top of our app.js file. <br>
+            "app1.use(express.json());" and
+            <br> "app1.use(express.urlencoded());" in the top of our app1.js file. <br>
             - If a problem parsing json data still occurs, it could be because of NPM's pre installed bodyparser. <br>
             this can be removed in the terminal by writing "npm uninstall body-parser".
             <br></p>
@@ -162,7 +162,7 @@
         <p>First off we wil look at the get method, and this will be done in two different ways: <br>
         <li style="margin-left: 2%">Get all cars</li>
         <li style="margin-left: 2%">Get a car with a specific id</li>
-        <br>The first app.get returns the entire array of cars to the user through the callback function,
+        <br>The first app1.get returns the entire array of cars to the user through the callback function,
         this happens when arriving at the page "/cars". <br>
         <!-- - The callback function is explained under the JavaScript page.<br><br> -->
         The second get request is a get request for a car with a specific id. As seen above the cars have an id and a

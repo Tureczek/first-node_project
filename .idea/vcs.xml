@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/1_Mandatory" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Exam_Project_winter2020" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Exame_Project_Winter_2020" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Mandatory_2-Authentication_System" vcs="Git" />
   </component>
 </project>

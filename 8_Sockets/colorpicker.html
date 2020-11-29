@@ -18,30 +18,22 @@
     // console log the color before and after it is choosen
     console.log(document.getElementById("color").value)
 
-    let switchColor = document.getElementById("color").value;
 
-//    document.getElementById("color").onchange = function(){
-//        switchColor = this.value
-    //console.log(switchColor)
-//    }
-
+    // changebackground color
     function handleColorChange() {
         console.log("Color changed")
         const color = document.getElementById("color").value;
+        document.body.style.backgroundColor = color;
 
-        //by emit, vi call the event
-        socket.emit("client changed color", {data: color});
+        //by emit, we call the event
+        socket.emit("client changed color", { data: color });
     }
 
     socket.on("server sending the color", ({ data }) =>{
         console.log(data)
-        // changebackground color
+        document.body.style.backgroundColor = data;
     });
 
-    const element = document.body;
-    socket.on("server sending the color", ({ data }) => {
-        element.style.backgroundColor = data;
-    })
 
 </script>
 </body>

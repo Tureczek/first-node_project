@@ -3,20 +3,11 @@ const app = express();
 
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
-/*
-io.on("connection", (socket) => {
-    console.log(socket + 'A socket has connected');
 
-// make callback function
-    socket.on("client submit chat message", ({ data }) => {
-
-        socket.broadcast.emit("server send message", { data: data });
-    });
-
-});
-*/
+app.use(express.static('public'))
 
 const users = {}
+
 
 io.on('connection', socket => {
     socket.on('new-user', name => {
@@ -37,7 +28,7 @@ io.on('connection', socket => {
 
 
 app.get("/", (req, res) => {
-    return res.sendFile(__dirname + "/chat.html")
+    return res.sendFile(__dirname + "/public/chat.html")
 });
 
 

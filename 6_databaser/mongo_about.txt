@@ -27,6 +27,7 @@ Ved ikke hvad man skal lave, derfor er det godt at kunne ændre hele tiden.
 rapid prototyping.
 
 Kan kombineres, mongodb bruges til log.
+
             morgan fra npm i kunne bruges til at logge.
 -----------------
 

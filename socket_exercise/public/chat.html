@@ -11,6 +11,9 @@
 
 
 
+
+
+
 <div id="side-bar">
 <h1>Welcome to the chat</h1>
 </div>
@@ -26,14 +29,46 @@
 </form>
 
 
+<!-- From exams project. -->
+<button class="open-button" onclick="openForm()">Åben chatten</button>
+<div class="chat-popup" id="myForm">
+    <form class="form-container" id="send-container2" autocomplete="off">
+        <h1>Chat</h1>
+        <div id="chat_messages">
+            <p>Welcome to the chat</p>
+        </div>
+        <input placeholder="Type message.." id="msg_from_user" required>
+
+        <button type="submit" class="btn">Send besked</button>
+
+        <button type="button" class="btn cancel" onclick="closeForm()">Luk chatten</button>
+    </form>
+</div>
+
+
+
+
+
 
 <script>
+    /* Original script */
     const socket = io();
 
     const messageContainer = document.getElementById('message-container');
+    const messageContainer2 = document.getElementById('chat_messages');
+
+
     const messageForm = document.getElementById('send-container');
+    const messageForm2 = document.getElementById('send-container2');
+
+
     const messageInput = document.getElementById('message-input');
+    const messageInput2 = document.getElementById('msg_from_user');
+
+
     const sideBar = document.getElementById("side-bar");
+
+
 
 
     const name = prompt('what is your name?');
@@ -52,18 +87,18 @@
         appendMessage(`${name} disconnected`);
     });
 
-    messageForm.addEventListener('submit', event => {
+    messageForm2.addEventListener('submit', event => {
         event.preventDefault()
-        const message = messageInput.value;
+        const message = messageInput2.value;
         appendMessage(`You: ${message}`)
         socket.emit('send-chat-message', message);
-        messageInput.value = '';
+        messageInput2.value = '';
     });
 
     function appendMessage(message) {
         const messageElement = document.createElement('div')
         messageElement.innerText = message
-        messageContainer.append(messageElement);
+        messageContainer2.append(messageElement);
     }
 
     function appendUser(name){
@@ -71,6 +106,20 @@
         userElement.innerText = name;
         sideBar.append(userElement);
     }
+
+
+
+    /* new Script */
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+
 
 </script>
 
